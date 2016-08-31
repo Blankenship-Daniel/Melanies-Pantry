@@ -1,0 +1,35 @@
+body {
+    background: $bs-offwhite;
+    font-family: 'EB Garamond', serif;
+}
+h1 {
+    font-family: 'Quicksand', sans-serif;
+}
+.btn-primary {
+    background-color: $blue-500;
+    border-color: $blue-500;
+}
+.fruits {
+    @include border-radius(5px);
+    h4 {
+        color: $red-500;
+    }
+}
+.veggies {
+    @include border-radius(5px);
+    h4 {
+        color: $green-500;
+    }
+}
+.dairy {
+    @include border-radius(5px);
+    h4 {
+        color: $orange-500;
+    }
+}
+.meat {
+    @include border-radius(5px);
+    h4 {
+        color: $brown-500;
+    }
+}
