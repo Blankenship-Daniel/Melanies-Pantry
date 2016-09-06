@@ -35,6 +35,13 @@ body {
 h1 {
   font-family: 'Quicksand', sans-serif; }
 
+ul {
+  padding-left: 0px; }
+
+li {
+  list-style-type: none;
+  padding: 5px; }
+
 .btn-primary {
   background-color: #2196F3;
   border-color: #2196F3; }
@@ -70,6 +77,20 @@ h1 {
   border-radius: 5px; }
   .meat h4 {
     color: #795548; }
+
+.food_item_delete {
+  color: #f44336;
+  display: none;
+  margin-left: 10px; }
+
+.food_item_delete:hover {
+  cursor: pointer; }
+
+.food_item:hover {
+  text-decoration: underline; }
+
+.food_item:hover > .food_item_delete {
+  display: inline-block; }
 
 /******************************************************************************
  * Layout

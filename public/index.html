@@ -34,16 +34,7 @@
                             <span class="input-group-addon" id="basic-addon1">
                                 <i class="fa fa-cutlery"></i>
                             </span>
-                            <input
-                                type="text"
-                                name="addFoodInput"
-                                class="form-control"
-                                id="addFoodInput"
-                                placeholder="Put food name here"
-                                aria-describedby="basic-addon1"
-                                ng-model="foodName"
-                                required
-                                ng-class="{
+                            <input type="text" name="addFoodInput" class="form-control" id="addFoodInput" placeholder="Put food name here" aria-describedby="basic-addon1" ng-model="foodName" required ng-class="{
                                     'has-error': addFoodForm.addFoodInput.$invalid &&
                                                  addFoodForm.addFoodInput.$touched
                                 }">
@@ -53,48 +44,26 @@
                         <h4>Choose food group</h4>
                         <div class="radio">
                             <label>
-                                <input
-                                    type="radio"
-                                    name="foodGroupRadios"
-                                    id="fruitsRadio"
-                                    value="fruit"
-                                    ng-model="foodType"> Fruit
+                                <input type="radio" name="foodGroupRadios" id="fruitsRadio" value="fruit" ng-model="foodType"> Fruit
                             </label>
                         </div>
                         <div class="radio">
                             <label>
-                                <input
-                                    type="radio"
-                                    name="foodGroupRadios"
-                                    id="veggiesRadio"
-                                    value="vegetable"
-                                    ng-model="foodType"> Vegetable
+                                <input type="radio" name="foodGroupRadios" id="veggiesRadio" value="vegetable" ng-model="foodType"> Vegetable
                             </label>
                         </div>
                         <div class="radio">
                             <label>
-                                <input
-                                    type="radio"
-                                    name="foodGroupRadios"
-                                    id="dairyRadio"
-                                    value="dairy"
-                                    ng-model="foodType"> Dairy
+                                <input type="radio" name="foodGroupRadios" id="dairyRadio" value="dairy" ng-model="foodType"> Dairy
                             </label>
                         </div>
                         <div class="radio">
                             <label>
-                                <input
-                                    type="radio"
-                                    name="foodGroupRadios"
-                                    id="meatRadio"
-                                    value="meat"
-                                    ng-model="foodType"> Meat
+                                <input type="radio" name="foodGroupRadios" id="meatRadio" value="meat" ng-model="foodType"> Meat
                             </label>
                         </div>
                     </div>
-                    <button
-                        type="submit"
-                        class="btn btn-primary"> Add Food
+                    <button type="submit" class="btn btn-primary"> Add Food
                     </button>
                 </form>
             </div>
@@ -107,8 +76,11 @@
                         <h4>Fruits</h4>
                         <ul>
                             <div ng-repeat="food in _foods.fruit">
-                                <li>
-                                    {{ food.name }} 
+                                <li class="food_item">
+                                    <span>{{ food.name }}</span>
+                                    <span class="food_item_delete" ng-click="deleteFood('fruit', food.id)">
+                                        <i class="fa fa-minus-circle"></i>
+                                    </span>
                                 </li>
                             </div>
                         </ul>
@@ -119,8 +91,11 @@
                         <h4>Vegetables</h4>
                         <ul>
                             <div ng-repeat="food in _foods.vegetable">
-                                <li>
-                                    {{ food.name }}
+                                <li class="food_item">
+                                    <span>{{ food.name }}</span>
+                                    <span class="food_item_delete" ng-click="deleteFood('vegetable', food.id)">
+                                        <i class="fa fa-minus-circle"></i>
+                                    </span>
                                 </li>
                             </div>
                         </ul>
@@ -131,8 +106,11 @@
                         <h4>Dairy</h4>
                         <ul>
                             <div ng-repeat="food in _foods.dairy">
-                                <li>
-                                    {{ food.name }}
+                                <li class="food_item">
+                                    <span>{{ food.name }}</span>
+                                    <span class="food_item_delete" ng-click="deleteFood('dairy', food.id)">
+                                        <i class="fa fa-minus-circle"></i>
+                                    </span>
                                 </li>
                             </div>
                         </ul>
@@ -143,8 +121,11 @@
                         <h4>Meat</h4>
                         <ul>
                             <div ng-repeat="food in _foods.meat">
-                                <li>
-                                    {{ food.name }}
+                                <li class="food_item">
+                                    <span>{{ food.name }}</span>
+                                    <span class="food_item_delete" ng-click="deleteFood('meat', food.id)">
+                                        <i class="fa fa-minus-circle"></i>
+                                    </span>
                                 </li>
                             </div>
                         </ul>

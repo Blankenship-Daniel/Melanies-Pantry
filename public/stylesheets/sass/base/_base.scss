@@ -5,6 +5,13 @@ body {
 h1 {
     font-family: 'Quicksand', sans-serif;
 }
+ul {
+    padding-left: 0px;
+}
+li {
+    list-style-type: none;
+    padding: 5px;
+}
 .btn-primary {
     background-color: $blue-500;
     border-color: $blue-500;
@@ -32,4 +39,18 @@ h1 {
     h4 {
         color: $brown-500;
     }
+}
+.food_item_delete {
+    color: $red-500;
+    display: none;
+    margin-left: 10px;
+}
+.food_item_delete:hover {
+    cursor: pointer;
+}
+.food_item:hover {
+    text-decoration: underline;
+}
+.food_item:hover > .food_item_delete {
+    display: inline-block;
 }
